@@ -1,6 +1,6 @@
 using System;
 
-public class Program
+public class Shelter
 {
     public static void Main()
     {
@@ -9,26 +9,25 @@ public class Program
         {
             try
             {
-                Console.WriteLine("Lūdzu, ievadiet patversmes nosaukumu");
+                Console.WriteLine("Please, write shelter name: ");
                 string shelterName = Console.ReadLine();
 
-                Console.WriteLine("Lūdzu, ievadiet suņu skaitu");
+                Console.WriteLine("Please, enter amount of dogs: ");
                 int dogs = Convert.ToInt32(Console.ReadLine());
 
-                Console.WriteLine("Lūdzu, kaķu skaitu");
+                Console.WriteLine("Please, enter amount of cats: ");
                 int cats = Convert.ToInt32(Console.ReadLine());
 
                 int animals = cats + dogs;
-
                 int dogPercent = (int)Math.Round((double)(100 * dogs) / animals);
                 int catPercent = (int)Math.Round((double)(100 * cats) / animals);
 
-                Console.WriteLine($"Patversme {shelterName} rūpējas par {animals} dzīvniekiem. Suņi veido {dogPercent}% no visiem dzīvniekiem, bet kaķi veido {catPercent}% no visiem dzīvniekiem.");
+                Console.WriteLine($"Shelter: {shelterName} takes care of {animals} animals. Dogs make {dogPercent}% in the shelter, but cats make {catPercent}% in the shelter.");
                 tryAgain = false;
             }
             catch (Exception e)
             {
-                Console.WriteLine("Notika ķļūda: " + e.Message);
+                Console.WriteLine("An Error occurred: " + e.Message);
             }
         }
     }
