@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Main {
+class Shelter {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         
@@ -9,8 +9,8 @@ class Main {
         int dogs;
         int cats;
         int animals;
-        float dogPercent;
-        float catPercent;
+        int dogPercent;
+        int catPercent;
         
         boolean TryAgain = true;
         while(TryAgain){
@@ -26,8 +26,8 @@ class Main {
                 
                
                 animals = (dogs + cats);
-                dogPercent = (float) ((dogs*100) / animals);
-                catPercent = (float) ((cats*100) / animals);
+                dogPercent = (int) Math.ceil(((dogs*100) / animals));
+                catPercent = (int) Math.ceil(((cats*100) / animals));
         
                 System.out.println("Shelter: " + shelterName + " holds " + animals + " animals in total. Dogs make " + dogPercent + "% of animals in the shelter, but cats make " + catPercent + "% of animals in the shelter.");
                 TryAgain = false;
